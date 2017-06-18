@@ -81,7 +81,7 @@ NSString *KRecentlySearchedCity = @"Last Searched Location";
                 NSString *searchText = weakSelf.searchText;
                 if ([searchText isEqualToString:location]) {
                     dispatch_sync(dispatch_get_main_queue(), ^{
-                        [self.activityIndicator stopAnimating];
+                        [weakSelf.activityIndicator stopAnimating];
                         if (weatherInfoObject == nil || error != nil) {
                             // TODO : show error message to user
                         } else {
